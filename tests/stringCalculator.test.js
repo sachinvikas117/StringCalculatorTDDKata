@@ -40,7 +40,7 @@ describe('StringCalculator', () => {
     expect(calculator.add('2,1001,3')).toBe(5);
   });
 
-  test('should support custom delimiters', () => {
+  test('should support custom delimiters containg []', () => {
     expect(calculator.add("//[***]\n1***2***3")).toBe(6); // Multi-character delimiter
   });
 
