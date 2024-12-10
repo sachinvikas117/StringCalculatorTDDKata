@@ -16,7 +16,7 @@ class StringCalculator{
     if (negatives.length > 0) {
       throw new Error(`negatives not allowed: ${negatives.join(', ')}`); //throwing error on finding all negative number 
     }
-    return numArray.reduce((sum, num) => sum + num, 0);
+    return numArray.reduce((sum, num) => (num <= 1000 ? sum + num : sum), 0);
   }
   
 }
