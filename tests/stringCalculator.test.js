@@ -32,6 +32,10 @@ describe('StringCalculator', () => {
     expect(calculator.add("//|\n2|3|4")).toBe(9);
   });
 
+  it('should throw an exception for negative numbers', () => {
+    expect(() => calculator.add('1,-2,3,-4')).toThrow('negatives not allowed: -2, -4');
+  });
+
 });
 
 
