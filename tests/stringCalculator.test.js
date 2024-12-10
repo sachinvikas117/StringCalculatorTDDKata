@@ -44,6 +44,18 @@ describe('StringCalculator', () => {
     expect(calculator.add("//[***]\n1***2***3")).toBe(6); // Multi-character delimiter
   });
 
+  it('should support custom delimiters of any length', () => {
+    expect(calculator.add('//[***]\n1***2***3')).toBe(6);
+  });
+
+  it('should support multiple custom delimiters', () => {
+    expect(calculator.add('//[*][%]\n1*2%3')).toBe(6);
+  });
+
+  it('should support multiple delimiters of any length', () => {
+    expect(calculator.add('//[***][#][%]\n1***2#3%4')).toBe(10);
+  });
+
 });
 
 
